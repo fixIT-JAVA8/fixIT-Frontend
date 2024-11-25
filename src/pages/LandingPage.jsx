@@ -4,7 +4,9 @@ import {Button} from "@nextui-org/react";
 const LandingPage = () => {
   return (
     <div>
-      <Button>LandingPage</Button>
+      <Button color="primary">
+        Button
+      </Button>
     </div>
   )
 }
