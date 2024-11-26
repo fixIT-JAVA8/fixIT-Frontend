@@ -1,12 +1,10 @@
 import React from 'react'
-import {Button} from "@nextui-org/react";
+import Carousel from '../components/landingPage/Hero';
 
 const LandingPage = () => {
   return (
     <div>
-      <Button color="primary">
-        Button
-      </Button>
+      <Carousel/>
     </div>
   )
 }

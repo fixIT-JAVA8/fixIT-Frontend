@@ -10,14 +10,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        "red" : "#FF0000",
-        "pink" : "#FF6969",
-        "blue" : "#0B2F9F",
-        "cream" : "#FFF5E0",
+        "blue1" : "#161D6F",
+        "blue2" : "#0B2F9F",
+        "green1" : "#85c9c5",
+        "green2" : "#C7FFD8",
       }
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    require('daisyui'),],
 }
 
