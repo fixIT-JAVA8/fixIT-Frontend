@@ -1,10 +1,12 @@
 import React from 'react'
-import Carousel from '../components/landingPage/Hero';
+import Hero from '../components/landingPage/Hero';
+import Services from '../components/landingPage/Services';
 
 const LandingPage = () => {
   return (
     <div>
-      <Carousel/>
+      <Hero/>
+      <Services/>
     </div>
   )
 }

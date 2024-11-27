@@ -1,66 +1,51 @@
 import React, { useState } from 'react'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import {Button} from "@nextui-org/react";
 import logo from "../../assets/logo.png"
 
 const NavbarHome = () => {
-  const [activeLink, setActiveLink] = useState("Home");
-
-  const handleActiveLink = (link) => {
-    setActiveLink(link);
-  };
-
-
   return (
-    <Navbar className='flex justify-center items-center'>
-      <NavbarBrand>
-        <img src={logo} alt="fixIT Logo" style={{ height: '50px' }} />
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-12" justify="center">
-        <NavbarItem isActive={activeLink === "Home"}>
-          <Link
-            href="#"
-            onClick={() => handleActiveLink("Home")}
-            style={{ color: activeLink === "Home" ? "#85c9c5" : "inherit" }}
-          >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "Services"}>
-          <Link
-            href="#"
-            onClick={() => handleActiveLink("Services")}
-            style={{ color: activeLink === "Services" ? "#85c9c5" : "inherit" }}
-          >
-            Services
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "About Us"}>
-          <Link
-            href="#"
-            onClick={() => handleActiveLink("About Us")}
-            style={{ color: activeLink === "About Us" ? "#85c9c5" : "inherit" }}
-          >
-            About Us
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "Contact Us"}>
-          <Link
-            href="#"
-            onClick={() => handleActiveLink("Contact Us")}
-            style={{ color: activeLink === "Contact Us" ? "#85c9c5" : "inherit" }}
-          >
-            Contact Us
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} color='blue2' className='bg-blue2 text-white font-bold' href="#">
-            Log in
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <a className="btn btn-ghost">
+          <img src={logo} alt="Logo" className="h-12 w-auto" />
+        </a>
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li><a>Services</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Contact Us</a></li>
+        </ul>
+      </div>
+      <div className="navbar-end mr-4">
+        <Button className='bg-blue2 text-white font-bold'>Log in</Button>
+      </div>
+    </div>
   )
 }
 
