@@ -2,13 +2,14 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import '../App.css'
 import Navbar from '../components/landingPage/NavbarHome'
+import Footer from '../components/landingPage/Footer'
 
 const Main = () => {
   return (
     <div>
         <Navbar/>
         <Outlet/>
-        <h1>footer</h1>
+        <Footer/>
     </div>
   )
 }

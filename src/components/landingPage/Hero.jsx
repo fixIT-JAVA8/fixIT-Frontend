@@ -11,11 +11,13 @@ const Hero = () => {
       }}>
       <div className="hero-overlay bg-opacity-0"></div>
       <div className="justify-start min-w-[1250px] text-neutral-content text-left">
-        <div className="max-w-xl">
-          <h1 className="mb-5 text-6xl font-semibold text-blue2">Welcome to fixIT</h1>
-          <p className="mb-5 text-gray-500 text-lg">
-            Repair any appliance with fixIT. Submit, track, and manage your repair requests seamlessly, ensuring faster resolutions and better service experiences.
-          </p>
+        <div className="max-w-2xl">
+          <h1 className="mb-5 text-4xl font-bold text-blue2">FixIT makes repairs a breeze,<br/>Submit and track with perfect ease!</h1>
+          <div className="max-w-xl">
+            <p className="mb-5 text-gray-500 text-lg">
+              Repair any appliance with fixIT. Submit, track, and manage your repair requests seamlessly, ensuring faster resolutions and better service experiences.
+            </p>
+          </div>
           <Button className='bg-green1 text-white font-bold'>Request a Repair</Button>
         </div>
       </div>

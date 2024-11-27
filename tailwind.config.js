@@ -12,7 +12,7 @@ export default {
       colors: {
         "blue1" : "#161D6F",
         "blue2" : "#0B2F9F",
-        "green1" : "#85c9c5",
+        "green1" : "#47bfb8",
         "green2" : "#C7FFD8",
       }
     },
